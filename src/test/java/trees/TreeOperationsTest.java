@@ -28,5 +28,6 @@ public class TreeOperationsTest {
         expects.add("I");
         expects.add("H");
         assertEquals(expects, TreeOperations.preorder(F));
+        assertEquals(TreeOperations.preorder(F), TreeOperations.preorder(F));
     }
 }
