@@ -18,7 +18,7 @@ public class TreeOperationsTest {
     ArrayList<String> expects = new ArrayList<String>();
 
     @Before
-    public void buildTree() {
+    public void setExpects() {
         expects.add("F");
         expects.add("B");
         expects.add("A");
