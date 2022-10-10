@@ -17,10 +17,10 @@ public class TreeOperationsTest {
     Node<String> B = new Node<String>("B", A, D);
     Node<String> G = new Node<String>("G", null, I);
     Node<String> F = new Node<String>("F", B, G);
-    ArrayList<String> expects = new ArrayList<String>();
 
-    @Before
-    public void setExpects() {
+    @Test
+    public void Testpreorder() {
+        ArrayList<String> expects = new ArrayList<String>();
         expects.add("F");
         expects.add("B");
         expects.add("A");
@@ -30,11 +30,6 @@ public class TreeOperationsTest {
         expects.add("G");
         expects.add("I");
         expects.add("H");
-    }
-
-    @Test
-    public void Testpreorder() {
-
         assertEquals(expects, TreeOperations.preorder(F));
         assertEquals(TreeOperations.preorder(F), TreeOperations.preorder(F));
     }
