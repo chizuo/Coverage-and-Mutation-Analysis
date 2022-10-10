@@ -1,9 +1,11 @@
 package trees;
 
-import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+
+import java.util.ArrayList;
+
 import org.junit.Before;
+import org.junit.Test;
 
 public class TreeOperationsTest {
     Node<String> H = new Node<String>("H", null, null);
@@ -18,7 +20,7 @@ public class TreeOperationsTest {
     ArrayList<String> expects = new ArrayList<String>();
 
     @Before
-    void buildTree() {
+    public void setExpects() {
         expects.add("F");
         expects.add("B");
         expects.add("A");
@@ -32,6 +34,7 @@ public class TreeOperationsTest {
 
     @Test
     public void Testpreorder() {
+
         assertEquals(expects, TreeOperations.preorder(F));
         assertEquals(TreeOperations.preorder(F), TreeOperations.preorder(F));
     }
