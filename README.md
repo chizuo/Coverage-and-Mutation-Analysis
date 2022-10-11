@@ -19,7 +19,7 @@
   /\    \
  A  D    I
     /\  / \
-   C E  H  J
+   C  E H  J
             \
              K
 
