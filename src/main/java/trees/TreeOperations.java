@@ -10,7 +10,7 @@ public class TreeOperations {
         var results = new ArrayList<A>();
         Queue<Node<A>> queue = new LinkedList<>();
         queue.add(root);
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
             Node<A> next = queue.remove();
             if (next.left != null)
                 queue.add(next.left);
