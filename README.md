@@ -13,7 +13,7 @@
     - If you are unable to achieve 90% kill rate, explain why it cannot be improved. 
  ### Tree in unit tests
  ```
-      F 
+     F 
     / \
    B   G
   /\    \
