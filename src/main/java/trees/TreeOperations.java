@@ -7,8 +7,17 @@ import java.util.Stack;
 
 public class TreeOperations {
     public static <A> ArrayList<A> bfs(final Node<A> root) {
-        Queue<Node<A>> queue = new LinkedList<Node<A>>();
         var results = new ArrayList<A>();
+        Queue<Node<A>> queue = new LinkedList<>();
+        queue.add(root);
+        while (queue.size() > 0) {
+            Node<A> next = queue.remove();
+            if (next.left != null)
+                queue.add(next.left);
+            if (next.right != null)
+                queue.add(next.right);
+            results.add(next.contents);
+        }
         return results;
     }
 
