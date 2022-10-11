@@ -10,7 +10,7 @@
     - ~~If you are unable to achieve 90% code coverage through additional tests, explain why it cannot be improved.~~
   - Run mutation analysis against your unit tests using Maven.
     - [x] Achieve a minimum of 90% kill rate on mutations.
-    - ~~If you are unable to achieve 90% kill rate, explain why it cannot be improved. ~~
+    - ~~If you are unable to achieve 90% kill rate, explain why it cannot be improved.~~
  ### Tree in unit tests
  ```
      F 
