@@ -11,3 +11,16 @@
   - Run mutation analysis against your unit tests using Maven.
     - Achieve a minimum of 90% kill rate on mutations.
     - If you are unable to achieve 90% kill rate, explain why it cannot be improved. 
+ ### Tree in unit tests
+ ```
+      F 
+    / \
+   B   G
+  /\    \
+ A  D    I
+    /\  / \
+   C E  H  J
+            \
+             K
+
+ ```
