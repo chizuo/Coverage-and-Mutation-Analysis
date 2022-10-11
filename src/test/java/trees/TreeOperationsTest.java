@@ -1,6 +1,7 @@
 package trees;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import org.junit.Test;
@@ -19,7 +20,28 @@ public class TreeOperationsTest {
     Node<String> F = new Node<String>("F", B, G);
 
     @Test
-    public void TestPreOrder() {
+    public void TestBreadthFirstSearchCorrectness() {
+        ArrayList<String> expects = new ArrayList<String>();
+        expects.add("F");
+        expects.add("B");
+        expects.add("G");
+        expects.add("A");
+        expects.add("D");
+        expects.add("I");
+        expects.add("C");
+        expects.add("E");
+        expects.add("H");
+        expects.add("J");
+        expects.add("K");
+        var treeOperations = new TreeOperations();
+        assertEquals(expects, TreeOperations.bfs(F));
+        assertEquals(TreeOperations.bfs(F), treeOperations.bfs(F));
+        assertEquals(TreeOperations.bfs(B), treeOperations.bfs(B));
+        assertEquals(TreeOperations.bfs(G), treeOperations.bfs(G));
+    }
+
+    @Test
+    public void TestPreOrderCorrectness() {
         ArrayList<String> expects = new ArrayList<String>();
         expects.add("F");
         expects.add("B");
@@ -33,15 +55,22 @@ public class TreeOperationsTest {
         expects.add("J");
         expects.add("K");
         assertEquals(expects, TreeOperations.preorder(F));
-        assertEquals(TreeOperations.preorder(F), TreeOperations.preorder(F));
+        var treeOperations = new TreeOperations();
+        assertEquals(TreeOperations.preorder(F), treeOperations.preorder(F));
+        assertEquals(TreeOperations.preorder(B), treeOperations.preorder(B));
+        assertEquals(TreeOperations.preorder(G), treeOperations.preorder(G));
     }
 
     @Test
-    public void TestMaxDepth() {
+    public void TestMaxDepthCorrectness() {
+        var treeOperations = new TreeOperations();
+        assertEquals(TreeOperations.maxDepth(F), treeOperations.maxDepth(F));
+        assertEquals(TreeOperations.maxDepth(B), TreeOperations.maxDepth(I));
+        assertTrue(TreeOperations.maxDepth(G) > TreeOperations.maxDepth(B));
+        assertTrue(TreeOperations.maxDepth(G) < TreeOperations.maxDepth(F));
         assertEquals(5, TreeOperations.maxDepth(F));
         assertEquals(3, TreeOperations.maxDepth(B));
         assertEquals(4, TreeOperations.maxDepth(G));
         assertEquals(2, TreeOperations.maxDepth(D));
-        assertEquals(TreeOperations.maxDepth(B), TreeOperations.maxDepth(I));
     }
 }
