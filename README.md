@@ -1,4 +1,4 @@
-# COMP587-Estimating Testing Effectiveness
+# Estimating Testing Effectiveness
 ### Requirements
 - Implement the methods for `class TreeOperations` in TreeOperations.java while using `class Node` in Node.java as the class definition of the vertices in the tree being evaluated by:
   - [x] `public static <A> ArrayList<A> bfs(final Node<A> root)`
